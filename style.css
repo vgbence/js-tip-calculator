@@ -1,0 +1,115 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: darkgreen;
+}
+
+body {
+    background-image: url(/images/forint.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    opacity: 90%;
+    max-width: 50rem;
+    margin: 2rem auto;
+    background: linear-gradient(30deg,  #85bb65, #e8e9c9);
+    padding: 3rem 1.6rem 6rem 1.6rem;
+    border-radius: 8rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+}    
+    
+h1 {
+    color: darkgreen;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3.5rem;
+}
+
+hr {
+    border: 0.25rem solid darkgreen;
+}
+
+#container {
+    border: 1rem solid darkgreen;
+}
+
+
+section {
+    color: darkgreen;
+    background-color: white;
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    padding: 0 1.6rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 2px 2px lightslategrey;
+}
+
+/* közvetlen child element-et választjuk ki */
+section > div { 
+    padding: 1.6rem 0;
+}
+
+/* bill class parent, ezért mehet a flex a két child-nál */
+.bill {
+    display: flex;
+}
+
+.bill label {
+    flex: 1;
+    align-self: center; /*a number input piszkálása miatt kell a középre igazítás */
+}
+
+.bill input {
+    flex: 2;
+}
+
+input[type="number"] {
+    background-color: #f4f4f5;
+    font-size: 1.6rem;
+    border: 1px solid lightgrey;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    box-shadow: inset 0 2px 2px lightslategrey;
+}
+
+/* balra-jobb szélre igazít */
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #eee;
+    margin-top: 1.1rem;
+    border-radius: 0.3rem;
+    outline-color: #5bceae;
+}
+
+/* Chrome és Safari */
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #3dc0c0;
+    cursor: pointer;
+}
+
+/* Mozilla  */
+.range::-moz-range-thumb {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #3dc0c0;
+    cursor: pointer;
+    border: none;
+}
+
+.range::-moz-focus-outer {
+    border: 0;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/images/dollar.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js"></script> 
+
+    <title>Borravaló kalkulátor</title>
+</head>
+
+
+<body>
+    <main id="container" oninput="update()">
+
+        <h1><strong>BORRAVALÓ KALKULÁTOR</strong></h1>
+
+        <section>
+        <div class="bill">
+            <label for="yourBill">Számla</label>
+            <input type="number" placeholder="0 Ft" id="yourBill" oninput="update()"/>
+         </div>
+
+         <div>
+            <div class="space-between">
+                <label for="tipInput">Mennyit adsz?</label>
+                <span id="tipPercent">0%</span>
+            </div>
+                <input type="range" value="0" id="tipInput" class="range">
+        </div>
+
+        <div class="space-between">
+            <span>Borravaló:</span>
+            <span id="tipValue">0 Ft</span>
+        </div>
+
+        <hr>
+
+        <div class="space-between">
+            <span><strong>Végösszeg:</strong></span>
+            <span id="totalWithTip">0 Ft</span>
+        </div>
+        </section>   
+        
+        
+        <section>
+            <div>
+                <div class="space-between">
+                    <label for="splitInput">Szétosztás</label>
+                    <span id="splitValue">1 személy</span>
+                </div>
+                    <input type="range" min="1" max="10" value="1" id="splitInput" class="range">
+            </div>
+
+            <div class="space-between">
+                <span>Végösszeg 1 főre:</span>
+                <span id="billEach">0 Ft</span>
+            </div>
+
+            <div class="space-between">
+                <span>Borravaló 1 főre:</span>
+                <span id="tipEach">0 Ft</span>
+            </div>
+        </section>
+    
+    </main> 
+</body>
+</html>
